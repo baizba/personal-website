@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
+import { ShapedDividerComponent } from './shaped-divider/shaped-divider.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShapedDividerComponent
   ],
   imports: [
     BrowserModule,
