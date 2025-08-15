@@ -33,3 +33,23 @@ footer {
 footer img {
     width: 20px;
 }
+
+.spacer {
+  flex: 1 1 auto;
+  max-width: 150px;
+}
+
+.toolbar-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+mat-toolbar {
+  display: inline-flex;
+  width: auto;
+}
+
+.top-space {
+  width: 100%;
+  height: 110px;
+}
