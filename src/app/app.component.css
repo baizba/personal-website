@@ -48,3 +48,15 @@ mat-toolbar {
   display: inline-flex;
   width: auto;
 }
+
+.custom-shape-divider-top-1755259899 {
+  width: 100%;
+  overflow: hidden;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1755259899 svg {
+  display: block;
+  width: calc(189% + 1px);
+  height: 50px;
+}
