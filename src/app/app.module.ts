@@ -7,18 +7,22 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import { ShapedDividerComponent } from './shaped-divider/shaped-divider.component';
+import { ProfileComponent } from './profile/profile.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShapedDividerComponent
+    ShapedDividerComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]
