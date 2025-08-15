@@ -1,0 +1,21 @@
+.projects-wrapper {
+  background-color: #3f51b5;
+  padding-top: 40px;
+}
+
+.projects-wrapper .projects {
+  display: flex;
+  justify-content: center; /* evenly distribute cards along the row with space around them */
+  flex-wrap: wrap; /* allows the items to wrap as needed */
+  padding: 0 20px; /* adds padding to left and right so content will take roughly 80% */
+}
+
+mat-card {
+  margin: 20px 20px 0 0;
+  max-width: 300px;
+  width: 300px;
+}
+
+.projects-wrapper .title {
+  justify-items: center;
+}

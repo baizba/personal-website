@@ -9,12 +9,15 @@ import {MatIconModule} from "@angular/material/icon";
 import { ShapedDividerComponent } from './shaped-divider/shaped-divider.component';
 import { ProfileComponent } from './profile/profile.component';
 import {NgOptimizedImage} from "@angular/common";
+import { ProjectsComponent } from './projects/projects.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
     AppComponent,
     ShapedDividerComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import {NgOptimizedImage} from "@angular/common";
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
