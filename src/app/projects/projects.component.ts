@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ProfileServiceService} from "../profile-service.service";
+import {ProfileService} from "../profile.service";
 
 @Component({
   selector: 'app-projects',
@@ -10,7 +10,7 @@ export class ProjectsComponent implements OnInit {
 
   projects: any;
 
-  constructor(private profileService: ProfileServiceService) {  }
+  constructor(private profileService: ProfileService) {  }
 
   ngOnInit(): void {
     this.projects = this.profileService.getProfile().projects;
