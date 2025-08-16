@@ -7,38 +7,14 @@
   </div>
 
   <div class="projects">
-    <mat-card appearance="outlined">
+    <mat-card appearance="outlined" *ngFor="let project of projects">
       <mat-card-header>
-        <mat-card-title>JustFly</mat-card-title>
-        <mat-card-subtitle>GA Navigation App for Android. Airspaces in realtime during flight.</mat-card-subtitle>
+        <mat-card-title>{{project.title}}</mat-card-title>
+        <mat-card-subtitle>{{project.description}}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-actions>
-        <a href="https://github.com/baizba/JustFly" target="_blank">
-          <button mat-button>GitHub</button>
-        </a>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card appearance="outlined">
-      <mat-card-header>
-        <mat-card-title>Portfolio</mat-card-title>
-        <mat-card-subtitle>This Website.<br> Angular + Netlify</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-actions>
-        <a href="https://github.com/baizba/personal-website" target="_blank">
-          <button mat-button>GitHub</button>
-        </a>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card appearance="outlined">
-      <mat-card-header>
-        <mat-card-title>Jumper</mat-card-title>
-        <mat-card-subtitle>Reinforcement learning agent for a self-developed game.</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-actions>
-        <a href="https://github.com/baizba/jumper" target="_blank">
-          <button mat-button>GitHub</button>
+        <a [href]="project.link.url" target="_blank">
+          <button mat-button>{{project.link.text}}</button>
         </a>
       </mat-card-actions>
     </mat-card>

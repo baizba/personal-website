@@ -1,5 +1,5 @@
 <div class="profile-wrapper">
   <img ngSrc="assets/img/profile-vb.jpg" alt="vidovic_branislav" width="300" height="300" class="profile-image spacing">
-  <h1 class="mat-headline-3 spacing">BRANISLAV VIDOVIC</h1>
-  <h3 class="mat-headline-5">Senior Software Developer</h3>
+  <h1 class="mat-headline-3 spacing">{{profile.name}}</h1>
+  <h3 class="mat-headline-5" *ngFor="let title of profile.titles">{{title}}</h3>
 </div>
