@@ -11,23 +11,27 @@ import { ProfileComponent } from './profile/profile.component';
 import {NgOptimizedImage} from "@angular/common";
 import { ProjectsComponent } from './projects/projects.component';
 import {MatCardModule} from "@angular/material/card";
+import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
     AppComponent,
     ShapedDividerComponent,
     ProfileComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ProjectDialogComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    NgOptimizedImage,
-    MatCardModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        NgOptimizedImage,
+        MatCardModule,
+        MatDialogModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
