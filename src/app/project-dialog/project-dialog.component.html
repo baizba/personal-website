@@ -1,6 +1,11 @@
-<h2 mat-dialog-title>{{data.title}}</h2>
+<h2 mat-dialog-title>{{ data.title }}</h2>
 <mat-dialog-content class="mat-typography">
-  {{data.longDescription}}
+  {{ data.longDescription }}
+  <br><br>
+  <p>Skills</p>
+  <mat-chip-set aria-label="Fish selection" *ngIf="data?.skills != null">
+    <mat-chip *ngFor="let skill of data.skills">{{ skill }}</mat-chip>
+  </mat-chip-set>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Close</button>

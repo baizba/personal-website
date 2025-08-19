@@ -13,6 +13,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import {MatCardModule} from "@angular/material/card";
 import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatChipsModule} from "@angular/material/chips";
 
 @NgModule({
   declarations: [
@@ -22,16 +23,17 @@ import {MatDialogModule} from "@angular/material/dialog";
     ProjectsComponent,
     ProjectDialogComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatIconModule,
-        NgOptimizedImage,
-        MatCardModule,
-        MatDialogModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    NgOptimizedImage,
+    MatCardModule,
+    MatDialogModule,
+    MatChipsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
