@@ -14,6 +14,8 @@ import {MatCardModule} from "@angular/material/card";
 import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatChipsModule} from "@angular/material/chips";
+import { ExperienceComponent } from './experience/experience.component';
+import {TimelineModule} from "primeng/timeline";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import {MatChipsModule} from "@angular/material/chips";
     ShapedDividerComponent,
     ProfileComponent,
     ProjectsComponent,
-    ProjectDialogComponent
+    ProjectDialogComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import {MatChipsModule} from "@angular/material/chips";
     NgOptimizedImage,
     MatCardModule,
     MatDialogModule,
-    MatChipsModule
+    MatChipsModule,
+    TimelineModule
   ],
   providers: [],
   bootstrap: [AppComponent]

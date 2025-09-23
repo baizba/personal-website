@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -140,12 +140,55 @@ export class ProfileService {
         Digital Services which could be easily customized for each client separately.
         `
       }
+    ],
+    experience: [
+      {
+        position: "Senior Java Camunda Developer",
+        from: "March 2021",
+        to: "Present",
+        company: "JIT IT-Dienstleistungs GmbH",
+        roleDescription: `
+        Process design and development using Camunda.
+        Responsible for designing Camunda processes in collaboration with the client, and implementing them through all staging environments until the go-live phase.
+        `
+      },
+      {
+        position: "Senior Java Web (Hybris) Developer",
+        from: "March 2017",
+        to: "September 2020",
+        "company": "ecx.io an IBM Company",
+        roleDescription: `
+        Development of complex SAP Hybris-based eCommerce shops for various clients.
+        Integrated with multiple external systems and involved in real-time transactions and payment processing.
+        `
+      },
+      {
+        position: "Hybris Developer",
+        from: "May 2014",
+        to: "September 2016",
+        "company": "Netconomy Software & Consulting GmbH",
+        roleDescription: `
+        Developed SAP Hybris-based eCommerce solutions for diverse clients.
+        Projects included integration with several external systems and support for real-time transaction and payment systems.
+        `
+      },
+      {
+        position: "Java Software Developer – Consultant",
+        from: "November 2009",
+        to: "April 2014",
+        "company": "Codecentric d.o.o.",
+        roleDescription: `
+        Developed web applications within the Java ecosystem for insurance industry clients.
+        Created platforms capable of serving multiple customers, allowing them to reconfigure products, edit content, and apply customized insurance rules and conditions.
+        `
+      }
     ]
   }
 
-  constructor() { }
+  constructor() {
+  }
 
   getProfile(): any {
-      return this.profile;
+    return this.profile;
   }
 }

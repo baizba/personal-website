@@ -22,6 +22,9 @@
     "@angular/router": "^16.2.12",
     "aos": "^2.3.4",
     "cypress": "^10.0.3",
+    "primeflex": "^3.3.1",
+    "primeicons": "^6.0.1",
+    "primeng": "^16.9.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.3"
