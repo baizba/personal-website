@@ -18,6 +18,8 @@ import { ExperienceComponent } from './experience/experience.component';
 import {TimelineModule} from "primeng/timeline";
 import {CardModule} from "primeng/card";
 import {ButtonModule} from "primeng/button";
+import { SkillsTechComponent } from './skills-tech/skills-tech.component';
+import {ChipModule} from "primeng/chip";
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import {ButtonModule} from "primeng/button";
     ProfileComponent,
     ProjectsComponent,
     ProjectDialogComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    SkillsTechComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import {ButtonModule} from "primeng/button";
     MatChipsModule,
     TimelineModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    ChipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

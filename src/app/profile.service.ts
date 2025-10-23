@@ -128,6 +128,14 @@ export class ProfileService {
         Created platforms capable of serving multiple customers, allowing them to reconfigure products, edit content, and apply customized insurance rules and conditions.
         `
       }
+    ],
+    skills:[
+      "Architecture", "Devops", "CI", "Consulting", "TDD", "Team-Lead", "Customer Cooperation", "Communication",
+      "Web-Development", "Backend Development", "Frontend Development"
+    ],
+    technologies: [
+      "Java", "Spring", "REST", "SOAP", "WebServices", "Jenkins", "GIT", "Azure", "AWS", "Databases", "Kafka", "Python",
+      "Kotlin", "Oracle", "MySql", "MsSql", "Angular", "Android"
     ]
   }
 

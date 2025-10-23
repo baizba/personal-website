@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-quickstart';
+
+  scrollTo(section: string) {
+    document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+  }
+
 }
