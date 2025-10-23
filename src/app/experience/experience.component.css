@@ -1,0 +1,9 @@
+.experience-wrapper {
+  background-color: orange;
+  padding: 40px;
+}
+
+.experience-wrapper .title {
+  justify-items: center;
+  display: grid;
+}

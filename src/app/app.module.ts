@@ -16,6 +16,8 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatChipsModule} from "@angular/material/chips";
 import { ExperienceComponent } from './experience/experience.component';
 import {TimelineModule} from "primeng/timeline";
+import {CardModule} from "primeng/card";
+import {ButtonModule} from "primeng/button";
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import {TimelineModule} from "primeng/timeline";
     MatCardModule,
     MatDialogModule,
     MatChipsModule,
-    TimelineModule
+    TimelineModule,
+    CardModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
