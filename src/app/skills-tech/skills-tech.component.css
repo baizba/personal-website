@@ -19,16 +19,15 @@
   justify-items: center;
 }
 
-/* Card with 3D depth */
-.chip-card {
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
 
 /* Slight lift on hover */
 .chip-card:hover {
-  box-shadow: 10px 10px 20px 0 rgba(0,0,0,1);
-  transition: box-shadow .3s ease-in-out;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.6);
+}
+
+.chip-card {
+  border-radius: 16px; /* match the chip's visual shape */
+  background: white; /* or transparent depending on design */
+  overflow: hidden; /* ensures shadow respects border-radius if needed */
+  transition: box-shadow 0.3s;
 }
