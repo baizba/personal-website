@@ -21,6 +21,7 @@ import {ButtonModule} from "primeng/button";
 import { SkillsTechComponent } from './skills-tech/skills-tech.component';
 import {ChipModule} from "primeng/chip";
 import { AboutMeComponent } from './about-me/about-me.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
     ProjectDialogComponent,
     ExperienceComponent,
     SkillsTechComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
