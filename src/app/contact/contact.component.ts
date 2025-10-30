@@ -15,7 +15,6 @@ export class ContactComponent {
     const a = document.createElement('a');
     a.href = 'mailto:branislav.vidovic.ba@gmail.com';
     a.click();
-    console.log('click happened ' + a.href)
   }
 
 
