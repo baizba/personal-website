@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+
+  openLink(url: string): void {
+    window.open(url, '_blank');
+  }
+
+  openMail() {
+    const a = document.createElement('a');
+    a.href = 'mailto:branislav.vidovic.ba@gmail.com';
+    a.click();
+    console.log('click happened ' + a.href)
+  }
+
 
 }

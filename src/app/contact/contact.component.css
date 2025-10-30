@@ -1,0 +1,29 @@
+.contact-wrapper {
+  background-color: #3f51b5;
+  padding: 40px;
+}
+
+.contact-wrapper .title {
+  justify-items: center;
+  display: grid;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;        /* vertical centering */
+  justify-content: center;    /* horizontal centering */
+}
+
+.contacts button {
+  display: inline-flex;
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 2em;
+}
+
+i.icon-size {
+  font-size: 1em;
+  margin-right: 10px;
+}

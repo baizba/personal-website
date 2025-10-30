@@ -1,1 +1,35 @@
-<p>contact works!</p>
+<div class="contact-wrapper">
+  <div class="title">
+    <h1 id="contactTitle" class="mat-headline-3">Contact</h1>
+  </div>
+
+  <div class="contacts">
+    <button
+      pButton
+      type="button"
+      class="contact-link"
+      (click)="openMail()">
+      <i class="pi pi-at icon-size"></i>
+      <span>branislav.vidovic.ba@gmail.com</span>
+    </button>
+
+    <button
+      pButton
+      type="button"
+      class="contact-link"
+      (click)="openLink('https://github.com/baizba?tab=repositories')">
+      <i class="pi pi-github icon-size"></i>
+      <span>Github</span>
+    </button>
+
+    <button
+      pButton
+      type="button"
+      class="contact-link"
+      (click)="openLink('https://www.google.com/maps/place/Graz')">
+      <i class="pi pi-map-marker icon-size"></i>
+      <span>Graz, Austria</span>
+    </button>
+  </div>
+
+</div>
