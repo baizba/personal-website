@@ -48,4 +48,5 @@ footer img {
 mat-toolbar {
   display: inline-flex;
   width: auto;
+  gap: 10px; /*space between menu items*/
 }

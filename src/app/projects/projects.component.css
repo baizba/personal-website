@@ -29,4 +29,5 @@ mat-card:hover {
 .projects-wrapper .title {
   justify-items: center;
   display: grid;
+  color: white;
 }

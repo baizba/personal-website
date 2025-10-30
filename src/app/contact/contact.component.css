@@ -1,29 +1,43 @@
 .contact-wrapper {
   background-color: #3f51b5;
-  padding: 40px;
+  padding: 40px 20px;
+  color: white;             /* CRITICAL: Ensure all text/icons are visible on blue background */
+  text-align: center;       /* Center the main title (h1) */
 }
 
 .contact-wrapper .title {
-  justify-items: center;
-  display: grid;
+  margin-bottom: 25px;
 }
 
 .contacts {
   display: flex;
   flex-direction: row;
-  align-items: center;        /* vertical centering */
-  justify-content: center;    /* horizontal centering */
+  align-items: center;        /* Vertical centering of items */
+  justify-content: center;    /* Horizontal centering of items (links) */
+  gap: 2em;                   /* Space between links */
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* CRITICAL for responsiveness on small phones */
 }
 
 .contacts button {
   display: inline-flex;
+  align-items: center; /* Ensures icon and text are vertically aligned */
   background-color: transparent;
   border: none;
-  color: black;
-  font-size: 2em;
+  color: white;             /* CRITICAL: Text color is now white */
+  font-size: 1.5em;         /* Set a readable font size */
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 8px 10px; /* Gives the clickable area some breathing room */
+}
+
+.contacts button:hover {
+  color: #ff9900; /* Use your accent orange for a clear hover state */
+  cursor: pointer;
 }
 
 i.icon-size {
-  font-size: 1em;
-  margin-right: 10px;
+  font-size: 2em; /* Make the icon a bit larger than the text */
+  margin-right: 8px; /* Space between icon and text */
 }
