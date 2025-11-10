@@ -3,18 +3,20 @@
     <h3 id="experienceTitle" class="mat-headline-3">My professional Experience</h3>
   </div>
 
-  <p-timeline [value]="experience" align="alternate">
-    <ng-template pTemplate="marker">
+  <div class="experience-timeline">
+    <p-timeline [value]="experience" align="alternate">
+      <ng-template pTemplate="marker">
       <span
         class="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-1"
         [style]="{ 'background-color': 'red' }">
         <i class="pi pi-briefcase text-base"></i>
       </span>
-    </ng-template>
-    <ng-template pTemplate="content" let-exp>
-      <p-card [header]="exp.position" [subheader]="exp.from + ' - ' + exp.to">
-        <p>{{ exp.roleDescription }}</p>
-      </p-card>
-    </ng-template>
-  </p-timeline>
+      </ng-template>
+      <ng-template pTemplate="content" let-exp>
+        <p-card [header]="exp.position" [subheader]="exp.from + ' - ' + exp.to">
+          <p>{{ exp.roleDescription }}</p>
+        </p-card>
+      </ng-template>
+    </p-timeline>
+  </div>
 </div>

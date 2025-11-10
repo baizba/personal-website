@@ -7,3 +7,9 @@
   justify-items: center;
   display: grid;
 }
+
+.experience-timeline {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
