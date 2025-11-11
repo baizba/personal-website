@@ -1,0 +1,2 @@
+good source for a nice angular template
+https://github.com/DarylBuckle/angular-dev-portfolio

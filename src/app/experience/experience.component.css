@@ -1,0 +1,15 @@
+.experience-wrapper {
+  background-color: orange;
+  padding: 40px;
+}
+
+.experience-wrapper .title {
+  justify-items: center;
+  display: grid;
+}
+
+.experience-timeline {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}

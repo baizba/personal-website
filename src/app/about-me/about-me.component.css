@@ -1,0 +1,14 @@
+.about-wrapper {
+  background-color: orange;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about-wrapper .mat-body-1 {
+  display: block;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  text-align: left;
+}

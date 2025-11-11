@@ -1,0 +1,11 @@
+.custom-shape-divider-top {
+  width: 100%;
+  overflow: hidden;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top svg {
+  display: block;
+  width: calc(189% + 1px);
+  height: 50px;
+}

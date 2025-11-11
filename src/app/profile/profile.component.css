@@ -1,0 +1,15 @@
+.profile-wrapper {
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  background-color: orange;
+}
+
+.profile-image {
+  border-radius: 50%;
+}
+
+.profile-wrapper .spacing {
+  margin-top: 20px;
+  margin-bottom: 20px!important;
+}
