@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ProfileService} from "../profile.service";
 
 @Component({
   selector: 'app-about-me',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent {
+
+  aboutMe: String[];
+
+  constructor(profileService: ProfileService) {
+    this.aboutMe = profileService.getProfile().aboutMe;
+  }
 
 }

@@ -129,13 +129,28 @@ export class ProfileService {
         `
       }
     ],
-    skills:[
+    skills: [
       "Architecture", "Devops", "CI", "Consulting", "TDD", "Team-Lead", "Customer Cooperation", "Communication",
       "Web-Development", "Backend Development", "Frontend Development"
     ],
     technologies: [
       "Java", "Spring", "REST", "SOAP", "WebServices", "Jenkins", "GIT", "Azure", "AWS", "Databases", "Kafka", "Python",
       "Kotlin", "Oracle", "MySql", "MsSql", "Angular", "Android"
+    ],
+    aboutMe: [
+      `
+      Hi, I'm Branislav — a software developer and architect with over 15 years of experience.
+      I started in the Java web world when JSF was still a thing — and in some projects, it still is.`,
+      `
+      Over time I realized that many projects fail not because of technology, but because of the gap between
+      business and development. That’s why I moved into architecture and lead roles — to bridge that gap and make
+      sure both sides actually understand each other.`,
+      `
+      For me, architecture isn’t just about functionality. It’s about testability, deployment, and observability —
+      because if you can’t evolve or monitor your system, it’s already broken.`,
+      `
+      Outside of code, I’m a private pilot, photographer, and basketball player — I enjoy focused, flow-driven activities,
+      which probably describes how I work too.`
     ]
   }
 
