@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { SkillsTechComponent } from './skills-tech/skills-tech.component';
 import {ChipModule} from "primeng/chip";
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactComponent } from './contact/contact.component';
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -35,21 +37,23 @@ import { ContactComponent } from './contact/contact.component';
     AboutMeComponent,
     ContactComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    NgOptimizedImage,
-    MatCardModule,
-    MatDialogModule,
-    MatChipsModule,
-    TimelineModule,
-    CardModule,
-    ButtonModule,
-    ChipModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        NgOptimizedImage,
+        MatCardModule,
+        MatDialogModule,
+        MatChipsModule,
+        TimelineModule,
+        CardModule,
+        ButtonModule,
+        ChipModule,
+        MatMenuModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
