@@ -5,6 +5,9 @@
   background-color: orange;
 }
 
+.profile-wrapper h1 {
+  text-align: center;
+}
 .profile-image {
   border-radius: 50%;
 }

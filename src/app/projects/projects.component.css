@@ -33,4 +33,5 @@ mat-card:hover {
   justify-items: center;
   display: grid;
   color: white;
+  text-align: center;
 }
