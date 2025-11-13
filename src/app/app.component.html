@@ -3,27 +3,31 @@
     <mat-toolbar color="primary">
       <span>My Portfolio</span>
       <span class="spacer"></span>
-      <button mat-button (click)="scrollTo('projectsTitle')">Projects</button>
-      <button mat-button (click)="scrollTo('experienceTitle')">Experience</button>
-      <button mat-button (click)="scrollTo('skillsTitle')">Skills and Tech</button>
-      <button mat-button (click)="scrollTo('aboutTitle')">About Me</button>
-      <button mat-icon-button [matMenuTriggerFor]="mainMenu" aria-label="Open menu">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <mat-menu #mainMenu="matMenu">
-        <button mat-menu-item>
-          <span>Projects</span>
+      <div class="nav-links">
+        <button mat-button (click)="scrollTo('projectsTitle')">Projects</button>
+        <button mat-button (click)="scrollTo('experienceTitle')">Experience</button>
+        <button mat-button (click)="scrollTo('skillsTitle')">Skills and Tech</button>
+        <button mat-button (click)="scrollTo('aboutTitle')">About Me</button>
+      </div>
+      <div class="nav-menu">
+        <button mat-icon-button [matMenuTriggerFor]="mainMenu" aria-label="Open menu">
+          <mat-icon>menu</mat-icon>
         </button>
-        <button mat-menu-item>
-          <span>Experience</span>
-        </button>
-        <button mat-menu-item>
-          <span>Skills and Tech</span>
-        </button>
-        <button mat-menu-item>
-          <span>About Me</span>
-        </button>
-      </mat-menu>
+        <mat-menu #mainMenu="matMenu">
+          <button mat-menu-item>
+            <span>Projects</span>
+          </button>
+          <button mat-menu-item>
+            <span>Experience</span>
+          </button>
+          <button mat-menu-item>
+            <span>Skills and Tech</span>
+          </button>
+          <button mat-menu-item>
+            <span>About Me</span>
+          </button>
+        </mat-menu>
+      </div>
     </mat-toolbar>
   </div>
   <app-shaped-divider foregroundColor="#3f51b5" backgroundColor="orange"></app-shaped-divider>

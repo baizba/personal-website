@@ -50,3 +50,23 @@ mat-toolbar {
   width: auto;
   gap: 10px; /*space between menu items*/
 }
+
+/* Default: desktop view */
+.nav-links {
+  display: flex;
+}
+
+.nav-menu {
+  display: none;
+}
+
+/* Mobile: width 500px or below */
+@media (max-width: 500px) {
+  .nav-links {
+    display: none;     /* Hide regular buttons */
+  }
+
+  .nav-menu {
+    display: block;    /* Show hamburger menu */
+  }
+}
