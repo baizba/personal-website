@@ -14,16 +14,16 @@
           <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #mainMenu="matMenu">
-          <button mat-menu-item>
+          <button mat-menu-item (click)="scrollTo('projectsTitle')">
             <span>Projects</span>
           </button>
-          <button mat-menu-item>
+          <button mat-menu-item (click)="scrollTo('experienceTitle')">
             <span>Experience</span>
           </button>
-          <button mat-menu-item>
+          <button mat-menu-item (click)="scrollTo('skillsTitle')">
             <span>Skills and Tech</span>
           </button>
-          <button mat-menu-item>
+          <button mat-menu-item (click)="scrollTo('aboutTitle')">
             <span>About Me</span>
           </button>
         </mat-menu>
