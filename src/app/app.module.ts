@@ -26,6 +26,9 @@ import { ContactComponent } from './contact/contact.component';
 import {MatMenuModule} from "@angular/material/menu";
 import { ChatComponent } from './chat/chat.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -40,24 +43,27 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     ContactComponent,
     ChatComponent
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        AppRoutingModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatIconModule,
-        NgOptimizedImage,
-        MatCardModule,
-        MatDialogModule,
-        MatChipsModule,
-        TimelineModule,
-        CardModule,
-        ButtonModule,
-        ChipModule,
-        MatMenuModule,
-        MatTooltipModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    NgOptimizedImage,
+    MatCardModule,
+    MatDialogModule,
+    MatChipsModule,
+    TimelineModule,
+    CardModule,
+    ButtonModule,
+    ChipModule,
+    MatMenuModule,
+    MatTooltipModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
