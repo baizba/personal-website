@@ -24,6 +24,8 @@ import {ChipModule} from "primeng/chip";
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactComponent } from './contact/contact.component';
 import {MatMenuModule} from "@angular/material/menu";
+import { ChatComponent } from './chat/chat.component';
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import {MatMenuModule} from "@angular/material/menu";
     ExperienceComponent,
     SkillsTechComponent,
     AboutMeComponent,
-    ContactComponent
+    ContactComponent,
+    ChatComponent
   ],
     imports: [
         BrowserModule,
@@ -52,7 +55,8 @@ import {MatMenuModule} from "@angular/material/menu";
         CardModule,
         ButtonModule,
         ChipModule,
-        MatMenuModule
+        MatMenuModule,
+        MatTooltipModule
     ],
   providers: [],
   bootstrap: [AppComponent]

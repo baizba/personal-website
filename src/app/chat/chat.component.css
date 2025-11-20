@@ -1,0 +1,28 @@
+.chat-float-btn {
+  position: fixed;
+  bottom: 20px;
+  left: calc(100% - 80px);
+  z-index: 8999;
+  background-color: crimson !important;
+}
+
+
+.chat-card {
+  max-width: 300px;
+  max-height: 600px;
+  position: fixed;
+  bottom: 120px;
+  left: calc(100% - 330px);
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+.chat-header-image {
+  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.chat-card.invisible,
+.chat-card.invisible .mdc-card {
+  display: none !important;
+}
