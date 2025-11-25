@@ -53,4 +53,5 @@ export class ChatComponent implements OnInit {
     }
   }
 
+  protected readonly ChatActorEnum = ChatActorEnum;
 }
