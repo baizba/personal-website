@@ -46,6 +46,11 @@ export class ChatComponent implements OnInit {
         return;
       }
 
+      if (this.draft.trim() == '') {
+        event.preventDefault();
+        return;
+      }
+
       this.chatService.addMessage(new ChatMessageModel(ChatActorEnum.User, this.draft));
 
       this.draft = '';
