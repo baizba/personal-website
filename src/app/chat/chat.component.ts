@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {ChatMessageModel} from "../models/chat/chat-message.model";
 import {ChatActorEnum} from "../models/chat/chat-actor.enum";
 import {ChatService} from "../services/chat.service";
+import {HttpClient} from "@angular/common/http";
+import {ChatResponseModel} from "../models/chat/chat-response";
 
 @Component({
   selector: 'app-chat',
@@ -12,20 +14,25 @@ export class ChatComponent implements OnInit {
   chatInvisible: boolean = true;
   draft: String = ''
 
-  constructor(protected chatService: ChatService) { }
+  constructor(protected chatService: ChatService, private http: HttpClient) {
+  }
 
   ngOnInit(): void {
     this.chatService.chatHistory$.subscribe(history => {
       let lastMessage = history[history.length - 1];
 
       //send request to AI agent and wait for answer
-      if(lastMessage.chatActor == ChatActorEnum.User) {
+      if (lastMessage.chatActor == ChatActorEnum.User) {
         console.log("sending history to AI", lastMessage.text);
-        setTimeout(() => {
-          this.chatService.addMessage(new ChatMessageModel(ChatActorEnum.AI, "That's what she said."));
-          console.log("AI answered");
-          console.log(this.chatService.history);
-        }, 1000);
+
+        this.http.post<ChatResponseModel>(
+          'http://127.0.0.1:8000/chat',
+          {message: lastMessage.text}
+        ).subscribe(response => {
+          this.chatService.addMessage(new ChatMessageModel(ChatActorEnum.AI, response.answer)
+          );
+        });
+
       }
     })
   }
