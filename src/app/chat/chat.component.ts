@@ -25,13 +25,19 @@ export class ChatComponent implements OnInit {
       if (lastMessage.chatActor == ChatActorEnum.User) {
         console.log("sending history to AI", lastMessage.text);
 
-        this.http.post<ChatResponseModel>(
-          'http://127.0.0.1:8000/chat',
-          {message: lastMessage.text}
-        ).subscribe(response => {
-          this.chatService.addMessage(new ChatMessageModel(ChatActorEnum.AI, response.answer)
-          );
-        });
+        const url = "http://127.0.0.1:8000/chat";
+        const body = {message: lastMessage.text};
+        this.http.post<ChatResponseModel>(url, body)
+          .subscribe({
+            next: response => {
+              this.chatService.addMessage(new ChatMessageModel(ChatActorEnum.AI, response.answer));
+            },
+            error: err => {
+              console.error('Error calling AI endpoint:', err);
+              this.chatService.addMessage(new ChatMessageModel(ChatActorEnum.AI, "Sorry, I couldn't get a response."));
+            }
+          });
+
 
       }
     })
