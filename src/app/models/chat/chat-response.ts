@@ -1,6 +1,6 @@
 export class ChatResponseModel {
   constructor(
-    public readonly question: String,
-    public readonly answer: String
+    public readonly documents: String[],
+    public readonly distances: String[]
   ) {}
 }

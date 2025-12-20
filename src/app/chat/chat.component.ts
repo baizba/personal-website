@@ -4,6 +4,7 @@ import {ChatActorEnum} from "../models/chat/chat-actor.enum";
 import {ChatService} from "../services/chat.service";
 import {HttpClient} from "@angular/common/http";
 import {ChatResponseModel} from "../models/chat/chat-response";
+import {nanoid} from "nanoid";
 
 @Component({
   selector: 'app-chat',
@@ -26,11 +27,15 @@ export class ChatComponent implements OnInit {
         console.log("sending history to AI", lastMessage.text);
 
         const url = "http://127.0.0.1:8000/chat";
-        const body = {message: lastMessage.text};
+        const body = {
+          message: lastMessage.text,
+          uiRequestId: nanoid(10),
+          user: "Anonymous"
+        };
         this.http.post<ChatResponseModel>(url, body)
           .subscribe({
             next: response => {
-              this.chatService.addMessage(new ChatMessageModel(ChatActorEnum.AI, response.answer));
+              this.chatService.addMessage(new ChatMessageModel(ChatActorEnum.AI, response.documents[0]));
             },
             error: err => {
               console.error('Error calling AI endpoint:', err);
