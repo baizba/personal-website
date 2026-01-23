@@ -14,6 +14,7 @@ import {nanoid} from "nanoid";
 export class ChatComponent implements OnInit {
   chatInvisible: boolean = true;
   draft: String = ''
+  loading: boolean = false;
 
   constructor(protected chatService: ChatService, private http: HttpClient) {
   }
@@ -24,7 +25,7 @@ export class ChatComponent implements OnInit {
 
       //send request to AI agent and wait for answer
       if (lastMessage.chatActor == ChatActorEnum.User) {
-        console.log("sending history to AI", lastMessage.text);
+        console.log("sending question to AI", lastMessage.text);
 
         const url = "http://127.0.0.1:8000/chat";
         const body = {
@@ -36,16 +37,16 @@ export class ChatComponent implements OnInit {
           .subscribe({
             next: chatResponse => {
               this.chatService.addMessage(new ChatMessageModel(ChatActorEnum.AI, chatResponse.response));
+              this.loading = false;
             },
             error: err => {
               console.error('Error calling AI endpoint:', err);
               this.chatService.addMessage(new ChatMessageModel(ChatActorEnum.AI, "Sorry, I couldn't get a response."));
+              this.loading = false;
             }
           });
-
-
       }
-    })
+    });
   }
 
   toggleChat(): void {
@@ -70,6 +71,7 @@ export class ChatComponent implements OnInit {
       }
 
       this.chatService.addMessage(new ChatMessageModel(ChatActorEnum.User, this.draft));
+      this.loading = true;
 
       this.draft = '';
       event.preventDefault();

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
 import {ChatMessageModel} from "../models/chat/chat-message.model";
 
@@ -12,7 +12,7 @@ export class ChatService {
   private chatHistorySubject = new BehaviorSubject<ChatMessageModel[]>([]);
   chatHistory$ = this.chatHistorySubject.asObservable();
 
-  addMessage(msg: ChatMessageModel) {
+  addMessage(msg: ChatMessageModel) : void {
     const current = this.chatHistorySubject.value;
     this.chatHistorySubject.next([...current, msg]);
   }

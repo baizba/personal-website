@@ -1,4 +1,4 @@
-<mat-card class="chat-card" appearance="outlined" [class.invisible]="chatInvisible">
+d<mat-card class="chat-card" appearance="outlined" [class.invisible]="chatInvisible">
   <mat-card-header>
     <mat-icon>auto_awesome</mat-icon>
     <mat-card-title>Chat with AI</mat-card-title>
@@ -18,7 +18,8 @@
       [(ngModel)]="draft"
       (input)="autoResize($event)"
       (keydown)="sendMessage($event)"
-      class="chat-textarea" rows="1">
+      class="chat-textarea" rows="1"
+      [disabled]="loading">
     </textarea>
   </mat-card-actions>
 </mat-card>
