@@ -34,8 +34,8 @@ export class ChatComponent implements OnInit {
         };
         this.http.post<ChatResponseModel>(url, body)
           .subscribe({
-            next: response => {
-              this.chatService.addMessage(new ChatMessageModel(ChatActorEnum.AI, response.documents[0]));
+            next: chatResponse => {
+              this.chatService.addMessage(new ChatMessageModel(ChatActorEnum.AI, chatResponse.response));
             },
             error: err => {
               console.error('Error calling AI endpoint:', err);
