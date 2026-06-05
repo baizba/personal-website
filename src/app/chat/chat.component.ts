@@ -27,7 +27,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // poll the API ready endpoint every 5s; 204 => ready
     this.pollApiReady();
-    this.readyPollId = setInterval(() => this.pollApiReady(), 5000);
+    this.readyPollId = setInterval(() => this.pollApiReady(), 10000);
 
     this.chatService.chatHistory$.subscribe(history => {
       let lastMessage = history[history.length - 1];
