@@ -21,6 +21,18 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  if (req.method === "POST" && req.url === "/chat") {
+    res.writeHead(200, {
+      "Content-Type": "application/json",
+    });
+    res.end(
+      JSON.stringify({
+        response: "Hello from AI Chat Mock",
+      })
+    );
+    return;
+  }
+
   res.writeHead(404, {
     "Content-Type": "application/json",
   });
