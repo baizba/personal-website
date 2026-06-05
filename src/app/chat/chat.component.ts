@@ -5,6 +5,7 @@ import {ChatService} from "../services/chat.service";
 import {HttpClient} from "@angular/common/http";
 import {ChatResponseModel} from "../models/chat/chat-response";
 import {nanoid} from "nanoid";
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-chat',
@@ -18,6 +19,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   apiReady: boolean = false;
 
   private readyPollId?: ReturnType<typeof setInterval>;
+  private aiChatBaseUrl: string = environment.aiChatBaseUr;
 
   constructor(protected chatService: ChatService, private http: HttpClient) {
   }
@@ -34,7 +36,7 @@ export class ChatComponent implements OnInit, OnDestroy {
       if (lastMessage.chatActor == ChatActorEnum.User) {
         console.log("sending question to AI", lastMessage.text);
 
-        const url = "http://127.0.0.1:8100/chat";
+        const url = `${this.aiChatBaseUrl}/chat`;
         const body = {
           message: lastMessage.text,
           uiRequestId: nanoid(10),
@@ -79,7 +81,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   }
 
   private pollApiReady(): void {
-    const url = "http://127.0.01:8100/ready";
+    const url = `${this.aiChatBaseUrl}/ready`;
     this.http.get(url, {observe: 'response'})
       .subscribe({
         next: response => {
