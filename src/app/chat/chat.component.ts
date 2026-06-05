@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ChatMessageModel} from "../models/chat/chat-message.model";
 import {ChatActorEnum} from "../models/chat/chat-actor.enum";
 import {ChatService} from "../services/chat.service";
@@ -11,15 +11,22 @@ import {nanoid} from "nanoid";
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css']
 })
-export class ChatComponent implements OnInit {
+export class ChatComponent implements OnInit, OnDestroy {
   chatInvisible: boolean = true;
   draft: String = ''
   loading: boolean = false;
+  apiReady: boolean = false;
+
+  private readyPollId?: ReturnType<typeof setInterval>;
 
   constructor(protected chatService: ChatService, private http: HttpClient) {
   }
 
   ngOnInit(): void {
+    // poll the API ready endpoint every 5s; 204 => ready
+    this.pollApiReady();
+    this.readyPollId = setInterval(() => this.pollApiReady(), 5000);
+
     this.chatService.chatHistory$.subscribe(history => {
       let lastMessage = history[history.length - 1];
 
@@ -27,7 +34,7 @@ export class ChatComponent implements OnInit {
       if (lastMessage.chatActor == ChatActorEnum.User) {
         console.log("sending question to AI", lastMessage.text);
 
-        const url = "http://127.0.0.1:8000/chat";
+        const url = "http://127.0.0.1:8100/chat";
         const body = {
           message: lastMessage.text,
           uiRequestId: nanoid(10),
@@ -47,6 +54,41 @@ export class ChatComponent implements OnInit {
           });
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    if (this.readyPollId != null) {
+      clearInterval(this.readyPollId);
+    }
+  }
+
+  isInputDisabled(): boolean {
+    return this.loading || !this.apiReady;
+  }
+
+  getPlaceholderText(): string {
+    if (!this.apiReady) {
+      return "Waiting for AI to be ready...";
+    }
+
+    if (this.loading) {
+      return "Waiting for response...";
+    }
+
+    return "Type a message";
+  }
+
+  private pollApiReady(): void {
+    const url = "http://127.0.01:8100/ready";
+    this.http.get(url, {observe: 'response'})
+      .subscribe({
+        next: response => {
+          this.apiReady = response.status === 204;
+        },
+        error: () => {
+          this.apiReady = false;
+        }
+      });
   }
 
   toggleChat(): void {
