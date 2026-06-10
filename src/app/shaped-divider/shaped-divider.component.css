@@ -2,6 +2,10 @@
   width: 100%;
   overflow: hidden;
   transform: rotate(180deg);
+
+  /* Overlap neighbours by 1px so the same-coloured section behind/over the
+     divider absorbs the anti-aliased clip edge (otherwise a faint line shows). */
+  margin: -1px 0;
 }
 
 .custom-shape-divider-top svg {

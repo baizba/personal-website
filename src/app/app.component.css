@@ -45,6 +45,17 @@ footer img {
   background-color: #3f51b5;
 }
 
+/* Each shaped divider overlaps its neighbours by 1px (margin: -1px 0) so the
+   solid-coloured sections cover its anti-aliased clip edges. For that cover to
+   win, every section must paint ON TOP of the dividers. Giving each direct
+   child of #content (except the dividers themselves) a stacking context does
+   this in one place — so adding/removing sections needs no per-component CSS.
+   app-chat is excluded: it's a fixed-position overlay with its own stacking. */
+#content > :not(app-shaped-divider):not(app-chat) {
+  position: relative;
+  z-index: 1;
+}
+
 mat-toolbar {
   display: inline-flex;
   width: auto;
