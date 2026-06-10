@@ -3,3 +3,11 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+  --color-blue-light: #93c5fd;
+  --color-blue-very-light: #dbeafe;
+  --color-blue-primary: #2563eb;
+  --color-text-main: #1e293b;
+  --color-text-muted: #64748b;
+}

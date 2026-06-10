@@ -3,9 +3,9 @@
  * Centers text and ensures good contrast
  */
 .skills-wrapper {
-  background-color: #3f51b5; /* Retaining your blue background */
-  padding: 40px 20px;       /* Added horizontal padding for smaller screens */
-  color: white;             /* Ensures all text is white for high contrast */
+  background-color: var(--color-blue-light);
+  padding: 40px 20px;
+  color: var(--color-text-main);
   text-align: center;       /* Centers all text (h1, h3) */
 }
 
