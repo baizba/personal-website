@@ -2,7 +2,8 @@
   display: grid;
   width: 100%;
   justify-items: center;
-  background-color: orange;
+  background-color: var(--color-blue-very-light);
+  color: var(--color-text-main);
 }
 
 .profile-wrapper h1 {

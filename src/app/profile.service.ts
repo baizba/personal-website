@@ -11,7 +11,7 @@ export class ProfileService {
     projects: [
       {
         title: 'JustFly',
-        description: 'GA Navigation App for Android. Airspaces in realtime during flight.',
+        description: 'General aviation navigation app for Android, showing airspaces in real time during flight.',
         link: {
           text: 'GitHub',
           url: 'https://github.com/baizba/JustFly'
@@ -26,7 +26,7 @@ export class ProfileService {
       },
       {
         title: 'Portfolio',
-        description: 'This Website. Angular + Netlify',
+        description: 'This website. Built with Angular and deployed on Netlify.',
         link: {
           text: 'GitHub',
           url: 'https://github.com/baizba/personal-website'
@@ -41,7 +41,7 @@ export class ProfileService {
       },
       {
         title: 'Jumper',
-        description: 'Reinforcement learning agent for a self-developed game.',
+        description: 'Reinforcement learning agent for a custom-built game.',
         link: {
           text: 'GitHub',
           url: 'https://github.com/baizba/jumper'
@@ -76,7 +76,7 @@ export class ProfileService {
       },
       {
         title: 'OpenCMS Insurance Portal',
-        description: 'Develop unified OpenCMS platform for all mayor insurance clients in Germany',
+        description: 'Develop unified OpenCMS platform for major insurance clients in Germany',
         skills: ['Java', 'OpenCMS', 'Spring', 'REST', 'SOAP', 'WebServices', 'Jenkins', 'JSP', 'HTML', 'Maven', 'CSS'],
         longDescription: `
         Started as Java Developer and Consultant for OpenCMS for German Digital Service provider for Insurance Companies.
@@ -130,7 +130,7 @@ export class ProfileService {
       }
     ],
     skills: [
-      "Architecture", "Devops", "CI", "Consulting", "TDD", "Team-Lead", "Customer Cooperation", "Communication",
+      "Architecture", "Devops", "CI", "Consulting", "TDD", "Team-Lead", "Customer Collaboration", "Communication",
       "Web-Development", "Backend Development", "Frontend Development"
     ],
     technologies: [

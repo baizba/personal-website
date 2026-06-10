@@ -1,7 +1,7 @@
 .contact-wrapper {
-  background-color: #3f51b5;
+  background-color: var(--color-blue-light);
   padding: 40px 20px;
-  color: white;             /* CRITICAL: Ensure all text/icons are visible on blue background */
+  color: var(--color-text-main);             /* CRITICAL: Ensure all text/icons are visible on blue background */
   text-align: center;       /* Center the main title (h1) */
 }
 
@@ -25,7 +25,7 @@
   align-items: center; /* Ensures icon and text are vertically aligned */
   background-color: transparent;
   border: none;
-  color: white;             /* CRITICAL: Text color is now white */
+  color: var(--color-text-main);
   font-size: 1.5em;         /* Set a readable font size */
   font-weight: 500;
   transition: color 0.3s;
@@ -33,7 +33,7 @@
 }
 
 .contacts button:hover {
-  color: #ff9900; /* Use your accent orange for a clear hover state */
+  color: var(--color-text-muted); /* Use accent orange for a clear hover state */
   cursor: pointer;
 }
 

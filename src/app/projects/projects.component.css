@@ -1,5 +1,5 @@
 .projects-wrapper {
-  background-color: #3f51b5;
+  background-color: var(--color-blue-light);
   padding-top: 40px;
 }
 
@@ -32,6 +32,6 @@ mat-card:hover {
 .projects-wrapper .title {
   justify-items: center;
   display: grid;
-  color: white;
+  color: var(--color-text-main);
   text-align: center;
 }

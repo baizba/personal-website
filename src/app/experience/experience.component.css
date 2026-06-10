@@ -1,11 +1,12 @@
 .experience-wrapper {
-  background-color: orange;
+  background-color: var(--color-blue-very-light);
   padding: 40px;
 }
 
 .experience-wrapper .title {
   justify-items: center;
   display: grid;
+  color: var(--color-text-main);
 }
 
 .experience-timeline {

@@ -1,7 +1,8 @@
 .about-wrapper {
-  background-color: orange;
+  background-color: var(--color-blue-very-light);
   padding: 40px 20px;
   text-align: center;
+  color: var(--color-text-main);
 }
 
 .about-wrapper .mat-body-1 {
