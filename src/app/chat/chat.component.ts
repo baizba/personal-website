@@ -19,7 +19,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   apiReady: boolean = false;
 
   private readyPollId?: ReturnType<typeof setInterval>;
-  private aiChatBaseUrl: string = environment.aiChatBaseUr;
+  private aiChatBaseUrl: string = environment.aiChatBaseUrl;
 
   constructor(protected chatService: ChatService, private http: HttpClient) {
   }

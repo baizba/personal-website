@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  aiChatBaseUr: "http://localhost:8100"
+  aiChatBaseUrl: "http://localhost:8100"
 };

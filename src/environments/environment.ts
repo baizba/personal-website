@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  aiChatBaseUr: "http://localhost:8100"
+  aiChatBaseUrl: "http://localhost:8100"
 };
 
 /*
