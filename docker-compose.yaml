@@ -1,5 +1,6 @@
 services:
   personal-website:
+    image: bvidovic/personal-website:latest
     container_name: personal-website
     build:
       context: .
