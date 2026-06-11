@@ -21,7 +21,7 @@ export class ProfileService {
         Android Application used by private pilots to safely navigate Airspaces.
         OSM Droid used for map functionality. Open FlightMaps are used to show airspaces.
         It is also possible to switch to OpenStreet Maps for more detailed landscape.
-        There is also possibility to record GPX data so the flight can be review in 3D.
+        There is also possibility to record GPX data so the flight can be reviewed in 3D.
         `
       },
       {
