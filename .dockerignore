@@ -5,3 +5,7 @@ dist
 .idea
 .vscode
 ai-chat-mock
+.env
+*.log
+npm-debug.log*
+
