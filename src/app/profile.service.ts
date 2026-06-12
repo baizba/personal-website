@@ -7,7 +7,13 @@ export class ProfileService {
 
   readonly profile: any = {
     name: 'BRANISLAV VIDOVIC',
-    titles: ['Software Developer', 'Private Pilot'],
+    titles: [
+      'Backend & Distributed Systems Engineer',
+      'Applied AI Infrastructure | RAG / LLM Systems',
+      'Camunda Workflow Automation',
+      'Private Pilot',
+      'I build and automate systems and workflows that work and power our lives'
+    ],
     projects: [
       {
         title: 'JustFly',
